@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tegania Solutions — Design & Development Studio</title>
+  <meta name="description" content="Tegania Solutions is a design and development studio. We craft brands, websites and digital products — designed with intent, built to perform." />
+  <meta name="theme-color" content="#121110" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Tegania Solutions — home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="9" rx="2" />
+        <rect x="11.5" y="13" width="9" height="17" rx="2" />
+        <circle cx="26" cy="25" r="3.2" class="brand__dot" />
+      </svg>
+      <span class="brand__name">Tegania<span class="brand__sub">Solutions</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#process">Process</a>
+      <a href="#studio">Studio</a>
+    </nav>
+    <a class="btn btn--sm btn--ink magnetic" href="#contact"><span>Start a project</span></a>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#process">Process</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact" class="accent">Start a project →</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span> Now booking projects for 2027</p>
+        <h1 class="hero__title">
+          <span class="line reveal">We design it.</span>
+          <span class="line reveal">We <em>build</em> it.</span>
+          <span class="line reveal muted">You grow with it.</span>
+        </h1>
+        <p class="hero__lede reveal">
+          Tegania Solutions is a design &amp; development studio. Brand identities, websites and
+          digital products — crafted by one team, from first sketch to final line of code.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--accent magnetic" href="#contact"><span>Start a project</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="#services"><span>See what we do</span></a>
+        </div>
+      </div>
+
+      <!-- Design ↔ Code reveal -->
+      <figure class="split reveal" id="split" aria-label="Drag to compare the design and the code behind it">
+        <div class="split__layer split__design" aria-hidden="true">
+          <div class="mock">
+            <div class="mock__bar"><i></i><i></i><i></i><span>yourbrand.com</span></div>
+            <div class="mock__body">
+              <div class="mock__nav"><b>◐ Lumen</b><span>Shop</span><span>Story</span><span class="mock__pill">Cart · 2</span></div>
+              <div class="mock__hero">
+                <div>
+                  <small>New collection</small>
+                  <h3>Light, <em>shaped</em> by hand.</h3>
+                  <span class="mock__btn">Explore →</span>
+                </div>
+                <div class="mock__art"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mock__row"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="split__layer split__code" aria-hidden="true">
+          <pre><code><span class="c">&lt;!-- hero.html --&gt;</span>
+<span class="t">&lt;section</span> <span class="a">class</span>=<span class="s">"hero"</span><span class="t">&gt;</span>
+  <span class="t">&lt;small&gt;</span>New collection<span class="t">&lt;/small&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Light, <span class="t">&lt;em&gt;</span>shaped<span class="t">&lt;/em&gt;</span>
+      by hand.<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;a</span> <span class="a">href</span>=<span class="s">"/shop"</span><span class="t">&gt;</span>Explore →<span class="t">&lt;/a&gt;</span>
+<span class="t">&lt;/section&gt;</span>
+
+<span class="c">/* hero.css */</span>
+<span class="k">.hero</span> {
+  <span class="a">display</span>: grid;
+  <span class="a">grid-template-columns</span>: <span class="s">1.2fr 1fr</span>;
+  <span class="a">gap</span>: <span class="s">clamp(1rem, 4vw, 3rem)</span>;
+}
+<span class="k">.hero h1 em</span> {
+  <span class="a">font-family</span>: <span class="s">var(--serif)</span>;
+  <span class="a">color</span>: <span class="s">var(--accent)</span>;
+}</code></pre>
+        </div>
+        <div class="split__handle" aria-hidden="true">
+          <span class="split__knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+        </div>
+        <span class="split__tag split__tag--l" aria-hidden="true">Code</span>
+        <span class="split__tag split__tag--r" aria-hidden="true">Design</span>
+        <input class="split__range" type="range" min="0" max="100" value="50" aria-label="Reveal amount between code and design" />
+        <figcaption class="sr-only">An interface shown half as finished design and half as the code that builds it.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Brand Identity</span><i>✦</i><span>UI / UX Design</span><i>✦</i><span>Web Development</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Design Systems</span><i>✦</i><span>Motion &amp; Interaction</span><i>✦</i><span>Print &amp; Packaging</span><i>✦</i>
+        <span>Brand Identity</span><i>✦</i><span>UI / UX Design</span><i>✦</i><span>Web Development</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Design Systems</span><i>✦</i><span>Motion &amp; Interaction</span><i>✦</i><span>Print &amp; Packaging</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <header class="section__head">
+        <p class="label reveal">01 — Services</p>
+        <h2 class="reveal">Everything your brand needs to <em>look</em> right and <em>work</em> right.</h2>
+      </header>
+
+      <ol class="services">
+        <li class="service reveal">
+          <button class="service__row" aria-expanded="false">
+            <span class="service__num">01</span>
+            <span class="service__name">Brand &amp; Graphic Design</span>
+            <span class="service__tags">Identity · Logo · Print</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+          <div class="service__panel">
+            <div class="service__inner">
+              <p>Logos, visual identities and brand guidelines that make you recognisable at a glance — and consistent everywhere, from business cards to billboards.</p>
+              <ul><li>Logo &amp; identity systems</li><li>Brand guidelines</li><li>Print, packaging &amp; signage</li><li>Social &amp; marketing assets</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="service reveal">
+          <button class="service__row" aria-expanded="false">
+            <span class="service__num">02</span>
+            <span class="service__name">Web &amp; UI/UX Design</span>
+            <span class="service__tags">Research · Wireframes · UI</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+          <div class="service__panel">
+            <div class="service__inner">
+              <p>Interfaces designed around real people. We map the journeys, prototype the flows and polish every pixel so your visitors know exactly where to go next.</p>
+              <ul><li>UX research &amp; information architecture</li><li>Wireframes &amp; interactive prototypes</li><li>High-fidelity UI design</li><li>Design systems</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="service reveal">
+          <button class="service__row" aria-expanded="false">
+            <span class="service__num">03</span>
+            <span class="service__name">Web Development</span>
+            <span class="service__tags">Websites · Apps · E-commerce</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+          <div class="service__panel">
+            <div class="service__inner">
+              <p>Fast, accessible, search-friendly builds on modern stacks. Marketing sites, online stores and custom web apps — engineered to be easy for you to update.</p>
+              <ul><li>Custom websites &amp; landing pages</li><li>E-commerce &amp; CMS integration</li><li>Web applications</li><li>Performance &amp; SEO foundations</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="service reveal">
+          <button class="service__row" aria-expanded="false">
+            <span class="service__num">04</span>
+            <span class="service__name">Care &amp; Growth</span>
+            <span class="service__tags">Support · Iteration · Analytics</span>
+            <span class="service__icon" aria-hidden="true"></span>
+          </button>
+          <div class="service__panel">
+            <div class="service__inner">
+              <p>Launch is the beginning. We keep your site secure, up to date and improving — with ongoing design support whenever your business needs something new.</p>
+              <ul><li>Hosting, updates &amp; security</li><li>Analytics &amp; conversion tuning</li><li>Content &amp; feature iterations</li><li>On-call design support</li></ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ APPROACH (dark) ============ -->
+    <section class="section section--dark" id="approach">
+      <header class="section__head">
+        <p class="label reveal">02 — Approach</p>
+        <h2 class="reveal">Most agencies hand off between designers and developers. <em>We don't.</em></h2>
+      </header>
+
+      <div class="principles">
+        <article class="principle reveal spot">
+          <span class="principle__glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="18" cy="24" r="12"/><circle cx="30" cy="24" r="12"/></svg>
+          </span>
+          <h3>One team, end to end</h3>
+          <p>The people who design your project are the people who build it. Nothing gets lost in translation.</p>
+        </article>
+        <article class="principle reveal spot">
+          <span class="principle__glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 36 L20 22 L28 30 L40 12"/><path d="M32 12h8v8"/></svg>
+          </span>
+          <h3>Built to perform</h3>
+          <p>Every site ships with a performance budget, accessibility checks and clean SEO foundations — not as extras.</p>
+        </article>
+        <article class="principle reveal spot">
+          <span class="principle__glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="28" rx="4"/><path d="M8 18h32M16 26h10M16 31h16"/></svg>
+          </span>
+          <h3>Clear, fixed quotes</h3>
+          <p>Scoped up front, priced up front. You'll know what you're getting and what it costs before we start.</p>
+        </article>
+        <article class="principle reveal spot">
+          <span class="principle__glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M10 14h28v18H22l-8 6v-6h-4z"/></svg>
+          </span>
+          <h3>Direct communication</h3>
+          <p>No account-manager relay. You talk to the makers, with regular check-ins and a shared view of progress.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process">
+      <header class="section__head">
+        <p class="label reveal">03 — Process</p>
+        <h2 class="reveal">A calm, clear path from <em>idea</em> to launch.</h2>
+      </header>
+
+      <div class="process">
+        <div class="process__rail" aria-hidden="true"><span class="process__fill"></span></div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <div><h3>Discover</h3><p>We learn your business, audience and goals, then agree a clear scope, timeline and fixed quote.</p><span class="step__time">Week 1</span></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <div><h3>Design</h3><p>Moodboards, wireframes and polished visuals — shared early and refined with your feedback.</p><span class="step__time">Weeks 2–4</span></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <div><h3>Build</h3><p>We develop, test across devices and tune for speed and accessibility. You review on a live preview link.</p><span class="step__time">Weeks 4–7</span></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <div><h3>Launch &amp; grow</h3><p>We go live, hand over training and stay on hand to support, measure and improve.</p><span class="step__time">Ongoing</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ STUDIO ============ -->
+    <section class="section studio" id="studio">
+      <div class="studio__grid">
+        <div>
+          <p class="label reveal">04 — Studio</p>
+          <h2 class="reveal">A new studio with a <em>simple</em> promise.</h2>
+        </div>
+        <div class="studio__text">
+          <p class="reveal">We started Tegania Solutions because good design and solid engineering shouldn't live in separate rooms. Every project gets our full attention, honest advice, and work we're proud to put our name on.</p>
+          <p class="reveal">Whether you're launching something new or ready to outgrow a site that no longer fits — we'd love to hear about it.</p>
+        </div>
+      </div>
+
+      <div class="commit reveal">
+        <div class="commit__item"><span class="commit__big">100<sup>%</sup></span><span>In-house — design and code, never outsourced</span></div>
+        <div class="commit__item"><span class="commit__big">24<sup>h</sup></span><span>Reply time on every enquiry</span></div>
+        <div class="commit__item"><span class="commit__big">AA</span><span>WCAG accessibility as our baseline</span></div>
+        <div class="commit__item"><span class="commit__big">0</span><span>Templates. Every project starts from a blank page</span></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--dark contact" id="contact">
+      <div class="contact__grid">
+        <div class="contact__intro">
+          <p class="label reveal">05 — Contact</p>
+          <h2 class="contact__title reveal">Have a project <em>in mind?</em></h2>
+          <p class="reveal">Tell us a little about it. We'll reply within one business day with next steps — no pressure, no jargon.</p>
+          <a class="contact__mail reveal" href="mailto:nasser@tegania.com">nasser@tegania.com<span aria-hidden="true">↗</span></a>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <fieldset class="chips">
+            <legend>I'm interested in</legend>
+            <label><input type="checkbox" name="interest" value="Branding" /><span>Branding</span></label>
+            <label><input type="checkbox" name="interest" value="Web design" /><span>Web design</span></label>
+            <label><input type="checkbox" name="interest" value="Development" /><span>Development</span></label>
+            <label><input type="checkbox" name="interest" value="E-commerce" /><span>E-commerce</span></label>
+            <label><input type="checkbox" name="interest" value="Ongoing support" /><span>Ongoing support</span></label>
+          </fieldset>
+
+          <div class="field">
+            <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required />
+            <label for="f-name">Your name</label>
+          </div>
+          <div class="field">
+            <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required />
+            <label for="f-email">Email address</label>
+          </div>
+          <div class="field">
+            <select id="f-budget" name="budget">
+              <option value="">Not sure yet</option>
+              <option>Under $2,500</option>
+              <option>$2,500 – $7,500</option>
+              <option>$7,500 – $20,000</option>
+              <option>$20,000+</option>
+            </select>
+            <label for="f-budget" class="is-static">Budget (optional)</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="f-msg">Tell us about your project</label>
+          </div>
+
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+
+          <button class="btn btn--accent btn--block magnetic" type="submit"><span>Send enquiry</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__word" aria-hidden="true">Tegania</p>
+    <div class="footer__row">
+      <span>© <span id="year"></span> Tegania Solutions</span>
+      <nav aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=4" defer></script>
+</body>
+</html>
