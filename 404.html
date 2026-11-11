@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Tegania Solutions</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f3f0e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <style>
+    /* Self-contained: this page can be served at any depth, so it avoids relative asset paths */
+    :root { --paper:#f3f0e9; --ink:#121110; --muted:#6d685f; --accent:#ff4b2b; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--paper); color: var(--ink);
+      font-family: "Inter Tight", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+      display: grid; place-items: center; padding: 2rem 1rem; overflow: hidden; position: relative;
+    }
+    body::before {
+      content: ""; position: absolute; width: 70vmax; height: 70vmax; right: -25vmax; top: -30vmax;
+      background: radial-gradient(circle, rgba(255,75,43,.22), transparent 62%); pointer-events: none;
+    }
+    main { position: relative; max-width: 640px; display: grid; gap: 1.5rem; justify-items: start; }
+    .mark { width: 40px; height: 40px; fill: var(--ink); }
+    .label { font-family: "JetBrains Mono", monospace; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .big { font-size: clamp(6rem, 26vw, 13rem); font-weight: 700; letter-spacing: -.06em; line-height: .8; margin: 0; color: var(--ink); }
+    .big span { color: var(--accent); }
+    h1 { font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -.04em; line-height: 1.02; margin: 0; font-weight: 600; }
+    h1 em { font-family: "Instrument Serif", serif; font-weight: 400; color: var(--accent); }
+    p { margin: 0; color: var(--muted); font-size: 1.1rem; line-height: 1.55; max-width: 460px; }
+    a.btn { display: inline-flex; align-items: center; gap: .6rem; background: var(--ink); color: var(--paper); text-decoration: none;
+      padding: 1rem 1.5rem; border-radius: 999px; font-weight: 600; transition: background .3s; }
+    a.btn:hover, a.btn:focus-visible { background: var(--accent); }
+    a.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="9" rx="2"/><rect x="11.5" y="13" width="9" height="17" rx="2"/><circle cx="26" cy="25" r="3.2" fill="#ff4b2b"/></svg>
+    <p class="label">Error 404 — Page not found</p>
+    <p class="big" aria-hidden="true">4<span>0</span>4</p>
+    <h1>This page wasn't <em>designed</em> yet.</h1>
+    <p>The link may be broken or the page may have moved. Let's get you back somewhere useful.</p>
+    <a class="btn" id="home" href="/">Back to homepage →</a>
+  </main>
+  <script>
+    // Works on github.io/TeganiaSolutions/ and on a custom domain root
+    var base = location.pathname.indexOf("/TeganiaSolutions") === 0 ? "/TeganiaSolutions/" : "/";
+    document.getElementById("home").setAttribute("href", base);
+  </script>
+</body>
+</html>
