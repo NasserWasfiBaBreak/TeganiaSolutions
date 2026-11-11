@@ -29,16 +29,11 @@
     revealEls.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ---------- Nav: scrolled state, hide on scroll down, active link ---------- */
+  /* ---------- Nav: scrolled state, active link ---------- */
   const nav = $("#nav");
-  let lastY = scrollY;
+  // Nav stays visible at all times; it only gains a frosted background once the page is scrolled
   const onScroll = () => {
-    const y = scrollY;
-    nav.classList.toggle("is-scrolled", y > 20);
-    const menuOpen = toggle.getAttribute("aria-expanded") === "true";
-    nav.classList.toggle("is-hidden", !menuOpen && y > 500 && y > lastY + 4);
-    if (y < lastY - 4 || y < 500) nav.classList.remove("is-hidden");
-    lastY = y;
+    nav.classList.toggle("is-scrolled", scrollY > 20);
     updateProcess();
   };
 

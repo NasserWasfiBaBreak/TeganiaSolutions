@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nasserwasfibabreak.github.io/TeganiaSolutions/sitemap.xml
+Sitemap: https://tegania.com/sitemap.xml
